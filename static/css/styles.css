@@ -1,0 +1,22 @@
+
+.form-group{
+    margin-bottom: 2em;
+}
+button {
+    background-color: #232020;
+    padding: 10px;
+    margin: 10px;
+}
+
+button:hover{
+    background-color: #a6dbff;
+}
+
+button#save {
+    background-color: #dc0606;
+}
+
+button#save:hover{
+    background-color: #0270ba;
+}
+

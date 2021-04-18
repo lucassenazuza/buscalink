@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-auto">
+                {% for elemento in all_elements %}
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Links</th>
+                    <th>Deletear</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for link in all_links %}
+                {% if link.element_id == elemento.id %}
+                <tr>
+                    <td><i>{{ elemento.elementName }}</i></td>
+                    <td><a href>{{ link.link }}</a></td>
+                    <td><a href="/delete/{{link.id}}"><button class="btn btn-danger">Excluir </button></a></td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="col-md-3 col-md-offset-4">
+        <a href={{url_for('index')}}>
+            <button onclick="" type="submit" class="btn btn-primary btn-lg" style="background-color: #dc0606">Voltar
+            </button>
+        </a>
+    </div>
+</div>
+{% endblock %}
