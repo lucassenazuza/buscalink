@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
-    Sobre a Pagina
+<div class="container" xmlns="http://www.w3.org/1999/html">
+
+            <div class="row justify-content-md-center">
+            <p>O Site  <span style="font-style: italic;font-weight: bold"> Buscalinks </span>  permite que links sejam buscados pelo engine do google, através
+                da biblioteca <a href="https://pypi.org/project/googlesearch-python/" target="_blank">Google Search</a>
+
+             O Sistema foi desenvolvido usando o Framework <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>. Foi usado um banco
+                <a href="https://www.sqlite.org/index.html" target="_blank">SQLite</a> para armazenar os dados
+
+             O deploy da aplicação foi feito pelo <a href="https://www.heroku.com" target="_blank">Heroku</a> </p>
+
+            </div>
 </div>
 {% endblock %}

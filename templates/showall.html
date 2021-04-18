@@ -20,8 +20,8 @@
                 {% if link.element_id == elemento.id %}
                 <tr>
                     <td><i>{{ elemento.elementName }}</i></td>
-                    <td><a href>{{ link.link }}</a></td>
-                    <td><a href="/delete/{{link.id}}"><button class="btn btn-danger">Excluir </button></a></td>
+                    <td><a href="{{ link.link }}" target="_blank">{{ link.link }}</a></td>
+                    <td><a href="/delete/{{link.id}}" target="_blank"><button class="btn btn-danger">Excluir </button></a></td>
                 </tr>
                 {% endif %}
                 {% endfor %}

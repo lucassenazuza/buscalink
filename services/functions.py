@@ -11,6 +11,8 @@ class Services:
 
     def search_name(self):
         self.listAll = search(self.name,self.num_results+1,lang="pt-BR")
+        if(len(self.listAll) > 10):
+            return [self.listAll[i] for i in range(10) ]
         return self.listAll
 
     def __str__(self):

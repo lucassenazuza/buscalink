@@ -85,10 +85,14 @@ def statistic():
     number_elements = len(all_elements)
     number_links = len(all_links)
     try:
-        popular = Popular(all_elements)
-        most_popular = popular.find_popular()
-        return render_template("statistic.html", number_elements=number_elements, number_links=number_links,
-                               popular=popular, most_popular=most_popular)
+        if (number_elements > 0):
+            popular = Popular(all_elements)
+            most_popular = popular.find_popular()
+            return render_template("statistic.html", number_elements=number_elements, number_links=number_links,
+                                    most_popular=most_popular)
+        else:
+            return render_template("statistic.html", number_elements=0, number_links=0,
+                                   most_popular='none')
     except:
         print('Erro buscar mais popular')
     return render_template("index.html")
